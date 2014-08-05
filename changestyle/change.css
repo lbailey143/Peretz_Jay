@@ -1,0 +1,36 @@
+/* CSS Document */
+
+.regstyle {
+	background-color:red;
+	text-align:center;
+	}
+	
+.newstyle {
+	background-color:blue;
+	color:white;
+	font-style:italic;
+	font-size:300%;	
+}
+
+p {
+	font-size:24px;
+	color:white;
+}
+
+ul, ol {
+	list-style:none;
+}
+
+.pullquote {
+	float: left;
+	clear: left;
+	width: 200px;
+	border: 1px solid black;
+	padding: 10px;
+	font-size: 30px;
+	margin: 20px 10px 10px 0;
+	font-style: normal;
+	background-color: #9CC;
+	color: #FFF;
+}
+

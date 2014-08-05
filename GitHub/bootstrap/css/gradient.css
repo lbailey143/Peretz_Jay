@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+header, footer {
+
+	border-radius: 13px;
+	-webkit-border-radius: 13px;
+	-ms-border-radius: 13px;
+	background: #feffff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #feffff 0%, #ddf1f9 44%, #a0d8ef 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#feffff), color-stop(44%,#ddf1f9), color-stop(100%,#a0d8ef)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 44%,#a0d8ef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 44%,#a0d8ef 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 44%,#a0d8ef 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #feffff 0%,#ddf1f9 44%,#a0d8ef 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+}
+
+li {
+    width:170px;
+	padding: 5px 0 5px 10px;
+	border-radius: 13px;
+	-webkit-border-radius: 13px;
+	-ms-border-radius: 13px;
+	background: #feffff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #feffff 0%, #ddf1f9 44%, #a0d8ef 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#feffff), color-stop(44%,#ddf1f9), color-stop(100%,#a0d8ef)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 44%,#a0d8ef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 44%,#a0d8ef 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 44%,#a0d8ef 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #feffff 0%,#ddf1f9 44%,#a0d8ef 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 0 5px 10px;
+  border-radius: 13px;
+	-webkit-border-radius: 13px;
+	-ms-border-radius: 13px;
+	-webkit-transition: background 400ms ease-in-out 150ms;
+	-moz-transition: background 400ms ease-in-out 150ms;
+	-ms-transition: background 400ms ease-in-out 150ms;
+	-o-transition: background 400ms ease-in-out 150ms;
+	transition: background 400ms ease-in-out 150ms;
+}
+
+ul li hover {
+  display: block;
+  text-decoration: none;
+  border:thin #d6f4fa;
+  border-radius: 13px;
+	-webkit-border-radius: 13px;
+	-ms-border-radius: 13px;
+	-webkit-transition: background 1s ease-in-out 150ms;
+	-moz-transition: background 1s ease-in-out 150ms;
+	-ms-transition: background 1s ease-in-out 150ms;
+	-o-transition: background 1s ease-in-out 150ms;
+	transition: background 1s ease-in-out 150ms;
+	
+}
+
+
+.clearfloat {
+	clear: both;
+}
+.footer_center {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: small;
+	color: #06C;
+	text-align: center;
+	padding-top: 10px;
+}
+.header_center {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #06C;
+	text-align: center;
+	padding: 15px;
+}
+
+.checkers {
+	font-size: x-small;
+	font-style: italic;
+	padding-left:35px;
+}
+
+.img_sidebar {
+	text-align: left;
+	padding-left: 55px;
+}
+
+#nav {
+	list-style-position: inside;
+	list-style-image: none;
+	list-style-type: none;
+	float: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: medium;
+	color: #333;
+	display: block;
+}
+#container .row .span3 #nav li a:visited {
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #ded2c9;
+	background-color: #ded2c9;
+}
+
+#container .row .span3 #nav li a:hover, a:active, a:focus {
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 140px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	color: #FFF;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	background-color: #a0d8ef;
+	-moz-opacity:0.50;
+	-khtml-opacity: 0.50;
+	-webkit-opacity: 0.50;
+	-ms-opacity: 0.50;
+	opacity: .50;
+}

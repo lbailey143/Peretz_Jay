@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script language="Javascript">
+
+function OnButton1()
+{
+    document.info.action = "cgi/form.php";
+    document.info.target = "_blank";    // Open in a new window
+
+    document.info.submit();             // Submit the page
+
+    return true;
+}
+
+function OnButton2()
+{
+    document.info.action = "cgi/welcome.php";
+    document.info.target = "_blank";    // Open in a new window
+
+    document.info.submit();             // Submit the page
+
+    return true;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!--<form name="Form1" method="post">
+Your Name <input type="text" name="name" size="10" /><br />
+<INPUT type="button" value="Button1" name=name onclick="OnButton1(); OnButton2();">
+</form>-->
+
+<form method="post" name="info">
+<fieldset><legend>Enter your information below</legend>
+<p><input name="first" type="text" value="type first name" size="45">
+<input name="last" type="text" value="type last name" size="45"></p>
+<p><label>Male</label><input name="gender" type="radio" value="Male">
+<label>Female</label><input name="gender" type="radio" value="female"></p>
+<p><input name="email" type="text" value="type email address" size="60"></p>
+</fieldset>
+<input name=name onclick="OnButton1(); OnButton2();" type="button" value="Submit">
+<input name="reset" type="reset" value="Clear">
+</form>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+      <meta charset="utf-8">
+      <title>Multi-Submit Form</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script type='text/javascript' src='gen_validatorv31.js'></script>
+</head>
+<body onload='hideResultDiv();'>
+
+<!-- code from:
+http://www.html-form-guide.com/blog/web-form/91/submit-form-multiple-scripts/
+-->
+<div id='allcontainer'>
+<div id='formcontainer'>
+<!-- Form Code Start -->
+<form id='contactus' action='' method='post'>
+<fieldset >
+<legend>Multi-Submit Form</legend>
+
+<input type='hidden' name='submitted' id='submitted' value='1'>
+<div class='container'>
+    <label for='name' >Your Full Name*: </label><br>
+    <input type='text' name='name' id='name'  maxlength="50"><br>
+    <span id='contactus_name_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='email' >Email Address*:</label><br>
+    <input type='text' name='email' id='email' maxlength="50"><br>
+    <span id='contactus_email_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='phone' >Phone Number:</label><br>
+    <input type='text' name='phone' id='phone' maxlength="15"><br>
+    <span id='contactus_phone_errorloc' class='error'></span>
+</div>
+<div class='container'>
+<label for 'gender'>Male</label><input name="gender" type="radio" value="male">
+<label>Female</label><input name="gender" type="radio" value="female"><br>
+    <span id='contactus_gender_errorloc' class='error'></span>
+</div>
+<div class='container'>
+    <label for='message' >Message:</label><br>
+    <span id='contactus_message_errorloc' class='error'></span>
+    <textarea rows="10" cols="50" name='message' id='message'></textarea>
+</div>
+<div class='container'>
+    <input type='button' name='Submit' value='Submit' onclick='javascript: return SubmitForm()'>
+    <input name="reset" type="reset" value="Clear">
+</div>
+
+</fieldset>
+</form>
+<!-- client-side Form Validations:
+Uses the excellent form validation script from JavaScript-coder.com-->
+
+<script type='text/javascript'>
+// <![CDATA[
+
+    var frmvalidator  = new Validator("contactus");
+    frmvalidator.EnableOnPageErrorDisplay();
+    frmvalidator.EnableMsgsTogether();
+    frmvalidator.addValidation("name","req","Please provide your name");
+
+    frmvalidator.addValidation("email","req","Please provide your email address");
+
+    frmvalidator.addValidation("email","email","Please provide a valid email address");
+	
+	frmvalidator.addValidation("gender","gender","Please indicate your gender");
+
+    frmvalidator.addValidation("message","maxlen=2048","The message is too long!(more than 2KB!)");
+// ]]>
+</script>
+<script type='text/javascript'>
+
+function SubmitForm()
+{
+    if(document.forms['contactus'].onsubmit())
+    {
+        showResultDiv();
+        document.forms['contactus'].action='../cgi/form.php';
+        document.forms['contactus'].target='frame_result1';
+        document.forms['contactus'].submit();
+
+        document.forms['contactus'].action='../cgi/welcome.php';
+        document.forms['contactus'].target='frame_result2';
+        document.forms['contactus'].submit();
+
+        document.forms['contactus'].action='action2.php';
+        document.forms['contactus'].target='frame_result3';
+        document.forms['contactus'].submit();
+    }
+    return true;
+}
+
+function showResultDiv()
+{
+    var result_div = document.getElementById('resultcontainer');
+    result_div.style.display="";
+}
+
+function hideResultDiv()
+{
+    var result_div = document.getElementById('resultcontainer');
+    result_div.style.display='none';
+}
+
+
+</script>
+<!--
+Form Code End
+-->
+</div >
+<div id='resultcontainer'>
+There are three iframes below, that
+shows results from each of the action scripts.
+
+<div class='iframe_container'>
+<iframe name='frame_result1' width='350px' height='100px' frameborder='0'></iframe>
+</div>
+<div class='iframe_container'>
+<iframe name='frame_result2' width='350px' height='100px' frameborder='0'></iframe>
+</div>
+<div class='iframe_container'>
+<iframe name='frame_result3' width='350px' height='100px' frameborder='0'></iframe>
+</div>
+
+</div >
+</div>
+
+</body>
+</html>

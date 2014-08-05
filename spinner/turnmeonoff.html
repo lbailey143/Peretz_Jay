@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Turn Me On and Off</title>
+
+<style>
+.on {
+    padding:30px;
+    background-color:black;
+    color:white;
+}
+.off {
+    background-color:orange;
+    color:black;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+    $("p").click('slow', function () {
+        $(this).toggleClass('off');
+    });
+});
+</script>
+</head>
+
+<body>
+
+<p class="on">Click to turn me on and off</p>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* lte IE 9 style*/
+.navigation  {
+	-pie-background: linear-gradient( top,#a33e65 0%, #e86197 3%, #a33e65 3%, #8e3557 100%);
+	border-radius:    ;
+	position: relative;
+}
+
+a.article_nine_btn {
+	border-radius: 5px;
+	position: relative;
+}
+
+.top_footer  {
+	border-radius:    ;
+	position: relative;
+}
+
+.hmenubar   {
+	border-radius: 4px;
+	position: relative;
+}
+
+.hmenubar li a:hover  {
+	border-radius: 3px;
+	position: relative;
+}
+
+.hmenubar li a  {
+	position: relative;
+}
+
+.hmenubar li a:active  {
+	border-radius: 3px;
+	position: relative;
+}
+
+.hmenubar li a  {
+	position: relative;
+}
+
+.hmenubar li a.clicked  {
+	border-radius: 3px;
+	position: relative;
+}
+

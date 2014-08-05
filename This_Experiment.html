@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="experiment.css">
+<meta charset="utf-8">
+<script src="http://code.jquery.com/jquery.js"></script>
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script type="text/javascript">
+      $(document).ready(function() {               
+            $('#third').click( function() {
+                 $(this).contents().find('strong').css('color','red'); // *** THIS ONE ***
+            });                               
+      });   
+</script>
+
+<div id="first">
+    <div id="second">
+        <div id="third">
+            <span>
+                <strong>HELLO WORLD</strong>
+                how is everyone doing?
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

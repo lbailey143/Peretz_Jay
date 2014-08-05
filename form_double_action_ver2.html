@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+</head>
+
+<body>
+
+<!--<form name=f1 type=post action=''> 
+    <input type='submit' value='first url' onclick="f1.action='/save'">
+    <input type='submit' value='second url' onclick="f1.action='/process'">
+</form>-->
+
+<form name="info" type=post action="">
+	
+<fieldset><legend>Enter your information below</legend>
+	<p><input name="first" type="text" value="type first name" size="45">
+<input name="last" type="text" value="type last name" size="45"></p>
+	<p><label>Male</label><input name="gender" type="radio" value="Male">
+<label>Female</label><input name="gender" type="radio" value="female"></p>
+	<p><input name="email" type="text" value="type email address" size="60"></p>
+</fieldset>
+
+	
+	<input type="submit" value="Get Form Data" onclick=info.action="cgi/form.php" target="_blank">
+    <input type="submit" value ="Get Welcome" onclick=info.action="cgi/welcome.php" target="_blank">
+    <input name="reset" type="reset" value="Clear">
+</form>
+</body>
+</html>
